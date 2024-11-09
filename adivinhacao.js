@@ -29,11 +29,25 @@ function jogar() {
           continue;
         }
     
-      
-        }
+        const acertou = chute === numeroSecreto;
+        const maior = chute > numeroSecreto;
+        const menor = chute < numeroSecreto;
+    
+        if (acertou) {
+          console.log("Você acertou!");
+          break;
+        } else {
+          if (maior) {
+            console.log("Você errou! O seu chute foi maior que o número secreto.");
+          } else if (menor) {
+            console.log("Você errou! O seu chute foi menor que o número secreto.");
+          }
+          const pontosPerdidos = Math.abs(numeroSecreto - chute);
+          pontos -= pontosPerdidos;
+    }
       
     
       console.log("Fim do jogo.");
-    }
+}
     
     jogar();
