@@ -18,7 +18,19 @@ function jogar() {
         totalTentativas = 5;
     }
 
+    for (let rodada = 1; rodada <= totalTentativas; rodada++) {
+        console.log(`Tentativa ${rodada} de ${totalTentativas}`);
+        const chuteStr = prompt("Digite o seu número de 1 a 100: ");
+        console.log("Você digitou", chuteStr);
+        const chute = parseInt(chuteStr);
+
+        if (chute < 1 || chute > 100) {
+          console.log("Você deve digitar um número entre 1 e 100!");
+          continue;
+        }
     
+      
+        }
       
     
       console.log("Fim do jogo.");
